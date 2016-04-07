@@ -1,6 +1,6 @@
 package com.example
 
-import slick.driver.H2Driver.api._
+import slick.driver.SQLiteDriver.api._
 
 import com.example.Suppliers._
 

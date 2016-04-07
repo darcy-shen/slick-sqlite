@@ -8,10 +8,11 @@ object HelloSlick {
     import com.example.Suppliers._
     import com.example.Coffees._
 
-    val url = "jdbc:sqlite:/Users/mfirry/my-db-file.sqlite"
-    val driver = "org.sqlite.JDBC"
-
-    val db = Database.forURL(url, driver)
+//    val url = "jdbc:sqlite:database.db"
+//    val driver = "org.sqlite.JDBC"
+//
+//    val db = Database.forURL(url, driver)
+    val db = Database.forConfig("database")
 
     val setup = DBIO.seq(
       // Create the tables, including primary and foreign keys
@@ -37,6 +38,6 @@ object HelloSlick {
     )
 
     val setupFuture = db.run(setup)
-
+    db.close
   }
 }

@@ -10,3 +10,6 @@ libraryDependencies ++= Seq(
   "org.xerial" % "sqlite-jdbc" % "3.8.11.2"
 )
 
+
+
+fork in run := true

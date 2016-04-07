@@ -1,8 +1,6 @@
 package com.example
 
-import slick.driver.H2Driver.api._
-
-import scala.concurrent.ExecutionContext.Implicits.global
+import slick.driver.SQLiteDriver.api._
 
 // Definition of the SUPPLIERS table
 class Suppliers(tag: Tag) extends Table[(Int, String, String, String, String, String)](tag, "SUPPLIERS") {
